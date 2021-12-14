@@ -1,3 +1,4 @@
 #!/bin/sh
 
-echo ${PREV_VERSION} to ${NEW_VERSION}
+sed -r "s/version \[-->.*<!--\] version/version \[-->${NEW_VERSION}<!--\] version/g" README.md
+
