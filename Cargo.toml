@@ -1,5 +1,6 @@
 [package]
 name = "rust_test"
+authors = ["Shisei Hanai <ruimo.uno@gmail.com>"]
 version = "0.1.0"
 edition = "2018"
 description = "test"
