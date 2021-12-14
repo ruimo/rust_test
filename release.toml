@@ -1,2 +1,2 @@
 pre-release-replacements = [ {file="CHANGELOG.md", search="Unreleased", replace="{{version}}"}, {file="CHANGELOG.md", search="ReleaseDate", replace="{{date}}"} ]
-pre-release-hook = ["echo", "${PREV_VERSION} => ${NEW_VERSION}"]
+pre-release-hook = ["./update-readme.sh"]
