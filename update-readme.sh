@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sed -i -r "s/version \[-->.*<!--\] version/version \[-->${NEW_VERSION}<!--\] version/g" README.md
+sed -i "/<!-- replace start -->/,/<!-- replace end -->$/s|${PREV_VERSION}|${NEW_VERSION}|g" README.md
 
