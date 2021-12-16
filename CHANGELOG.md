@@ -1,4 +1,4 @@
-## [Unreleased] - ReleaseDate
+## [0.1.2] - 2021-12-16
 
 ### Added
 - feature 4
