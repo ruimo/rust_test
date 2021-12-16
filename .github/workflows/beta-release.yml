@@ -5,9 +5,8 @@ on: [ workflow_dispatch ]
 jobs:
   beta_release:
     runs-on: ubuntu-latest
-
-  steps:
-  - uses: actions/checkout@v2
-  - name: Beta Release
-    run: |
-      cargo release beta --execute --no-publish --no-confirm
+    steps:
+    - uses: actions/checkout@v2
+    - name: Beta Release
+      run: |
+        cargo release beta --execute --no-publish --no-confirm
