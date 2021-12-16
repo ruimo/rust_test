@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: cargo build --verbose --release
+      run: |
+        cargo build --verbose --release
+        zip run_test-x86_64.zip target/release/rust_test
     - name: Run tests
       run: cargo test --verbose
     - name: Get the version
@@ -37,6 +39,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/release/rust_test
-        asset_name: run_test(x86_64)
+        asset_path: run_test-x86_64.zip
+        asset_name: run_test-x86_64.zip
         asset_content_type: application/octet-stream
