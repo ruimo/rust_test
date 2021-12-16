@@ -20,6 +20,8 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
+    - name: Release build
+      run: cargo build --release
     - name: copy artifacts
       run: |
         rm -rf downloads
