@@ -17,7 +17,8 @@ jobs:
     - name: Build
       run: |
         cargo build --verbose --release
-        zip run_test-x86_64.zip target/release/rust_test
+        cd target/release
+        zip ../../run_test-x86_64.zip rust_test
     - name: Run tests
       run: cargo test --verbose
     - name: Get the version
