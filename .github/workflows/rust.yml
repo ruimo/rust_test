@@ -1,4 +1,4 @@
-name: Rust
+name: Snapshot Build
 
 on:
   push:
