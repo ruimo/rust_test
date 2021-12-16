@@ -31,6 +31,8 @@ jobs:
         release_name: Release ${{ steps.get_version.outputs.VERSION }}
         draft: false
         prerelease: false
+    - name: Debug
+      run: find .
     - name: Upload release assets
       uses: actions/upload-release-asset@v1
       env:
