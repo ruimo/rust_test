@@ -20,3 +20,13 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
+    - name: copy artifacts
+      run: |
+        rm -rf downloads
+        mkdir downloads
+        cp target/release/rust_test downloads/
+    - name: upload artifacts
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: downloads      
