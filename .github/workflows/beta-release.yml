@@ -10,4 +10,6 @@ jobs:
     - name: Beta Release
       run: |
         cargo install cargo-release
+        git config --global user.email "ruimo.uno@gmail.com"
+        git config --global user.name "Shisei Hanai"
         cargo release beta --execute --no-publish --no-confirm
