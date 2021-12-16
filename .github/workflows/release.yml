@@ -1,0 +1,15 @@
+name: Release
+
+on: [ workflow_dispatch ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Release
+      run: |
+        cargo install cargo-release
+        git config --global user.email "ruimo.uno@gmail.com"
+        git config --global user.name "Shisei Hanai"
+        cargo release --execute --no-publish --no-confirm
